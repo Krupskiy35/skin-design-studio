@@ -1,0 +1,8 @@
+/* SKIN DESIGN STUDIO: GSAP letter scatter. Keeps nested <em> styling. */
+.cover h1.fly-text { position:relative; perspective:700px; }
+.cover h1.fly-text .fly-char { display:inline-block; position:relative; white-space:pre; transform-origin:50% 50%; will-change:transform,opacity; }
+/* Existing reveal on .cover-content > * can animate the whole h1; disable only for this title. */
+.cover-content > h1.fly-text.reveal { opacity:1 !important; transform:none !important; transition:none !important; }
+@media (prefers-reduced-motion:reduce) {
+    .cover h1.fly-text .fly-char { will-change:auto; transform:none !important; opacity:1 !important; }
+}

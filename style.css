@@ -962,7 +962,7 @@ td:nth-child(3), th:nth-child(3) {
 
 @media (max-width: 1068px) {
     .cover h1 {
-        width: 100%;
+        width: 98%;
         max-width: 100%;
         margin-top: 25px;
 
@@ -1533,4 +1533,27 @@ td:nth-child(3), th:nth-child(3) {
     .tablewrap td:nth-child(3) {
         background: transparent !important;
     }
+}
+
+
+/* Слова переносяться тільки цілком */
+.fly-word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Кожна літера анімується окремо */
+.fly-char {
+    display: inline-block;
+    position: relative;
+    backface-visibility: hidden;
+    will-change: transform, opacity;
+}
+
+/* Дозволяємо заголовкам переносити слова */
+.slide h1,
+.slide h2 {
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
 }
